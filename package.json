@@ -5,14 +5,23 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts"
   },
+  "prisma":{
+    "seed": "node prisma/seeder/seed.js"
+  },
   "dependencies": {
+    "@prisma/client": "5.12.1",
     "elysia": "latest"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "prisma": "^5.12.1"
   },
   "module": "src/index.js",
   "bun-create": {
     "start": "bun run src/index.ts"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
   }
 }
